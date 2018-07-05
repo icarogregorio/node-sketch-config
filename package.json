@@ -1,0 +1,13 @@
+{
+  "name"         : "node-sketch-config",
+  "version"      : "0.0.1",
+  "description"  : "A config node for node-red to build another nodes",
+  "dependencies": {
+  },
+  "keywords": [ "node-red" ],
+  "node-red" : {
+    "nodes": {
+        "sketch-config": "sketch-config.js"
+    }
+  }
+}
