@@ -1,4 +1,5 @@
-module.exports = function(RED) {
+module.exports = function(RED) 
+{
     /*function sketchConfigNode(config) {
         RED.nodes.createNode(this,config);
         var node = this;
