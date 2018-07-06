@@ -1,4 +1,4 @@
-<!--########################## CONFIGURATION OF NODE #########################-->
+<!--########################## CONFIGURATION NODE #########################-->
 <script type="text/javascript">
     RED.nodes.registerType('configx',{
         category: 'config',
@@ -12,12 +12,12 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="configx   ">
+<script type="text/x-red" data-template-name="configx">
     <div class="form-row">
         <label for="node-config-input-host"><i class="icon-bookmark"></i> Host</label>
         <input type="text" id="node-config-input-host">
     </div>
-    <div class="form-row">   
+    <div class="form-row">
         <label for="node-config-input-port"><i class="icon-bookmark"></i> Port</label>
         <input type="text" id="node-config-input-port">
     </div>
@@ -26,7 +26,6 @@
 <script type="text/x-red" data-help-name="configx">
     <p>A configuration of node sketch to use for creating configs</p>
 </script>
-
 <!--########################### NODE DEFAULT PARAMETERS ######################-->
 <script type="text/javascript">
     RED.nodes.registerType('node-sketch-config',{
@@ -34,6 +33,7 @@
         color: '#a6bbcf',
         defaults: {
             server: {type:"configx", required: true},
+            name: {value: ""}
         },
         inputs:1,
         outputs:1,
@@ -48,12 +48,17 @@
 <script type="text/x-red" data-template-name="node-sketch-config">
     <div class="form-row">
         <!-- script for link with name of defaults -->  
-        <label for="server-configuration"><i class="icon-tag"></i> Server</label>
+        <label for="node-input-server"><i class="icon-bookmark"></i> Server</label>
         <input type="text" id="node-input-server" placeholder="server">
+    </div>
+    <div class="form-row">
+        <!-- script for link with name of defaults -->  
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="name">
     </div>
 </script>
 
 <script type="text/x-red" data-help-name="node-sketch-config">
-    <p>A config node sketch to use for creating nodes</p>
+    <p>A node sketch with configurations to use for creating nodes</p>
 </script>
 
